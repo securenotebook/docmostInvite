@@ -130,7 +130,7 @@ john.doe@example.com,member,TestWorkspace,myadmin@test.com
 alice.wonderland@example.com,admin,TestWorkspace,myadmin@test.com
 ```
 
-##### Execute the script to create invites from the csv filer
+##### Execute the script to create invites from the csv file
 
 ```
  docker compose run --rm invite-manager /app/run_create_invites.sh
@@ -152,6 +152,7 @@ Bulk invite creation complete
 
 ```
 docker compose build
+docker compose restart
 ```
 
 Output:
