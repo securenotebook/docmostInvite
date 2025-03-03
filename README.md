@@ -2,7 +2,7 @@
 
 This small docker stack builds on the default docker compose provided by docmost here: [https://raw.githubusercontent.com/docmost/docmost/main/docker-compose.yml](https://raw.githubusercontent.com/docmost/docmost/main/docker-compose.yml)
 
-Note this is af full replacement!
+Note this is a full stack!
 
 #### Clone the repo
 
