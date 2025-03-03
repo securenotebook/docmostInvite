@@ -34,7 +34,7 @@ services:
       - db
     env_file:
       - .env
-    command: ["python", "invite_script.py"]
+    command: ["/bin/bash", "-c", "/app/run_list_invites.sh"]
 
 volumes:
   docmost:

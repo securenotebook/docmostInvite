@@ -1,0 +1,3 @@
+email,role,workspace_name,inviter_email
+john.doe@example.com,member,Colt,wesley.elder@gmail.com
+alice.wonderland@example.com,admin,Colt,wesley.elder@gmail.com
