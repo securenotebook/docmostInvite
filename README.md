@@ -38,7 +38,7 @@ output:
 
 ```bash
 docmostInvitelist$ sudo docker compose run --rm invite-manager
-[sudo] password for wes: 
+[sudo] password for xxxx: 
 WARN[0000] /home/wes/docmostInvitelist/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
 [+] Creating 1/1
  ✔ Container docmostinvitelist-db-1  Running                                                                                                                                                                                                                              0.0s 
