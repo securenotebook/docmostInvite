@@ -10,6 +10,7 @@ DB_PORT = os.getenv("DB_PORT", "5432")
 DB_NAME = os.getenv("DB_NAME", "docmost")
 DB_USER = os.getenv("DB_USER", "docmost")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "STRONG_DB_PASSWORD")  # Update as needed
+inviter_email = os.getenv("INVITE_EMAIL", "myadmin@test.com")  # Update as needed
 
 # CSV file path
 CSV_FILE = "invites.csv"
@@ -64,7 +65,7 @@ def get_user_id(user_email):
         cursor.close()
         conn.close()
 
-def create_invite(email, role, workspace_name, inviter_email):
+def create_invite(email, role, workspace_name):
     """Insert a new invite into the workspace_invitations table."""
 
     # Get the required IDs dynamically
@@ -107,13 +108,12 @@ def bulk_create_invites():
                 email = row["email"].strip()
                 role = row["role"].strip().lower()
                 workspace_name = row["workspace_name"].strip()
-                inviter_email = row["inviter_email"].strip()
-
+                
                 if role not in ["member", "admin"]:
                     print(f"Skipping {email}: Invalid role '{role}'")
                     continue
 
-                create_invite(email, role, workspace_name, inviter_email)
+                create_invite(email, role, workspace_name)
 
         print("Bulk invite creation complete.")
     except FileNotFoundError:

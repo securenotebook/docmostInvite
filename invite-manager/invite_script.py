@@ -8,6 +8,7 @@ DB_NAME = os.getenv("POSTGRES_DB", "docmost")
 DB_USER = os.getenv("POSTGRES_USER", "docmost")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "STRONG_DB_PASSWORD")  # Update as needed
 
+
 # Docmost instance base URL from environment variable
 DOCMOST_URL = os.getenv("DOCMOST_URL", "http://localhost:5010")
 
